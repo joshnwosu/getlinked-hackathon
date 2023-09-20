@@ -1,21 +1,62 @@
-import { Box, Container, Flex, Text, Title } from "@mantine/core";
+import { Box, Container, Flex, Image, Text, Title } from "@mantine/core";
 import React from "react";
 import { timeline_data } from "./data";
 
 export default function Timeline() {
   return (
-    <Container size={"lg"} py={100}>
+    <Container size={"lg"} py={100} pos={"relative"}>
       <Flex align="center" direction="column">
         <Title order={1} style={{ color: "white" }}>
           Timeline
         </Title>
-        <Text w={300} ta="center" mt={"md"} style={{ color: "white" }}>
+        <Text
+          w={400}
+          maw={"100%"}
+          ta="center"
+          mt={"md"}
+          size="lg"
+          style={{ color: "white" }}
+        >
           Here is the breakdown of the time we anticipate using for the upcoming
           event.
         </Text>
       </Flex>
 
-      <Box mt={100}>
+      <Box mt={100} pos={"relative"}>
+        <Image
+          src={"/static/assets/images/star_purple.png"}
+          alt="Star"
+          style={{
+            width: 20,
+            height: 20,
+            position: "absolute",
+            top: 0,
+            left: 150,
+          }}
+        />
+        <Image
+          src={"/static/assets/images/star_white.png"}
+          alt="Star"
+          style={{
+            width: 20,
+            height: 20,
+            position: "absolute",
+            top: "50%",
+            right: 0,
+          }}
+        />
+        <Image
+          src={"/static/assets/images/star_grey.png"}
+          alt="Star"
+          style={{
+            width: 20,
+            height: 20,
+            position: "absolute",
+            bottom: 100,
+            left: 100,
+          }}
+        />
+
         {timeline_data.map((data, index) => {
           return (
             <Flex
@@ -75,9 +116,9 @@ export default function Timeline() {
               >
                 <Box
                   style={{
-                    width: 3,
+                    width: 4,
                     height: "100%",
-                    backgroundColor: "#903AFF",
+                    backgroundColor: "#D434FE",
                     position: "absolute",
                     top:
                       index === 0
@@ -90,10 +131,11 @@ export default function Timeline() {
                 />
                 <Box
                   style={{
-                    width: 50,
-                    height: 50,
-                    borderRadius: 50,
-                    backgroundColor: "#903AFF",
+                    width: 80,
+                    height: 80,
+                    borderRadius: "50%",
+
+                    background: "linear-gradient(to right,#D434FE, #903AFF)",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -101,7 +143,7 @@ export default function Timeline() {
                     position: "relative",
                   }}
                 >
-                  <Text size="md" style={{ color: "white" }} fw={500}>
+                  <Text size="xl" style={{ color: "white" }} fw={500}>
                     {index + 1}
                   </Text>
                 </Box>
