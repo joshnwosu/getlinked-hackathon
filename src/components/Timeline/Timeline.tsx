@@ -26,7 +26,7 @@ export default function Timeline() {
                 overflow: "hidden",
                 position: "relative",
               }}
-              py={40}
+              py={30}
             >
               <Box
                 style={{

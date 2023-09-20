@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `My Mantine Site`,
+    title: `GetLinked Hackathon`,
   },
   graphqlTypegen: true,
   plugins: ["gatsby-plugin-postcss"],
