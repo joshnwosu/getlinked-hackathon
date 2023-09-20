@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@mantine/core": "7.0.0",
+    "@mantine/form": "^7.0.0",
     "@mantine/hooks": "7.0.0",
+    "framer-motion": "^10.16.4",
     "gatsby": "^5.10.0",
     "gatsby-plugin-postcss": "^6.10.0",
     "postcss": "^8.4.23",
