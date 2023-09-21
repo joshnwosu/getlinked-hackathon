@@ -11,10 +11,11 @@ import {
 import React from "react";
 import { images, key_attributes_data } from "./data";
 import TextHightlight from "../widgets/TextHightlight";
+import ReadMoreBtn from "../widgets/ReadMoreBtn";
 
 export default function Overview() {
   return (
-    <Container size="xl">
+    <Container size="lg">
       <Grid py={20} gutter={"xl"} align="center">
         <Grid.Col span={6}>
           <Flex justify="flex-start">
@@ -85,27 +86,20 @@ export default function Overview() {
             {key_attributes_data.map((data, index) => {
               return (
                 <Box key={index.toString()} my={"lg"}>
-                  <Text fw={"bold"}>
+                  <Text fw={"bold"} fz={"lg"} lh={2}>
                     <TextHightlight color="#F534BF">
                       {data.title}:
                     </TextHightlight>
                   </Text>
-                  <Text style={{ color: "white" }}>{data.content}</Text>
+                  <Text style={{ color: "white" }} fz={"md"} lh={2}>
+                    {data.content}
+                  </Text>
                 </Box>
               );
             })}
           </Box>
 
-          <Button
-            mt={"xl"}
-            size="lg"
-            fz={"md"}
-            variant="gradient"
-            px={50}
-            gradient={{ from: "#F534BF", to: "#903AFF", deg: 90 }}
-          >
-            Read More
-          </Button>
+          <ReadMoreBtn />
         </Grid.Col>
       </Grid>
     </Container>

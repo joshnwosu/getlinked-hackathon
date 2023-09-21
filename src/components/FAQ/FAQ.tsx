@@ -15,7 +15,7 @@ import classes from "./FAQ.module.css";
 
 export default function FAQ() {
   return (
-    <Container size={"xl"}>
+    <Container size={"lg"}>
       <Grid py={20} gutter={"xl"} align="center" grow>
         <Grid.Col span={6}>
           <Title order={1} style={{ color: "white" }}>
