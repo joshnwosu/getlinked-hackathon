@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | string | any;
   width?: "fit-content" | "100%";
 }
 
@@ -10,17 +10,25 @@ export default function Reveal({ children, width = "fit-content" }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
-  const sliderControls = useAnimation();
+  // const sliderControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
-      sliderControls.start("visible");
+      // sliderControls.start("visible");
     }
   }, [isInView]);
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div
+      ref={ref}
+      style={{
+        position: "relative",
+        width,
+        overflow: "hidden",
+        display: "block",
+      }}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -35,7 +43,7 @@ export default function Reveal({ children, width = "fit-content" }: Props) {
       >
         {children}
       </motion.div>
-      <motion.div
+      {/* <motion.div
         variants={{
           hidden: { left: 0 },
           visible: { left: "100%" },
@@ -52,10 +60,10 @@ export default function Reveal({ children, width = "fit-content" }: Props) {
           bottom: 4,
           left: 0,
           right: 0,
-          backgroundColor: "red",
+          backgroundColor: "#d434fe",
           zIndex: 20,
         }}
-      />
+      /> */}
     </div>
   );
 }

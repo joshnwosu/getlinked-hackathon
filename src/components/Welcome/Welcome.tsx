@@ -12,6 +12,7 @@ import {
 import * as classes from "./Welcome.module.css";
 import TextHightlight from "../widgets/TextHightlight";
 import ReadMoreBtn from "../widgets/ReadMoreBtn";
+import Reveal from "../widgets/Reveal";
 
 export function Welcome() {
   return (
@@ -26,39 +27,54 @@ export function Welcome() {
         <Grid.Col span={5}>
           <Box w={"100%"} pt={"50px"} pos={"relative"}>
             <Box style={{ position: "relative" }}>
-              <Title size={"60px"} pos={"relative"} style={{ color: "white" }}>
-                getLinked Tech <br />
-                Hackathon <span style={{ color: "#d434fe" }}>1.0</span>
-              </Title>
+              <Reveal>
+                <Title
+                  size={"60px"}
+                  pos={"relative"}
+                  style={{ color: "white" }}
+                >
+                  getLinked Tech <br />
+                  <Reveal>
+                    Hackathon <span style={{ color: "#d434fe" }}>1.0</span>
+                  </Reveal>
+                </Title>
+              </Reveal>
+
               <Flex style={{ position: "absolute", right: 0, bottom: 0 }}>
-                <Image
-                  src={"/static/assets/images/chain.png"}
-                  alt="Chain"
-                  fit="contain"
-                  width={50}
-                  height={50}
-                />
-                <Image
-                  src={"/static/assets/images/fire.png"}
-                  alt="Fire"
-                  fit="contain"
-                  width={50}
-                  height={50}
-                />
+                <Reveal>
+                  <Image
+                    src={"/static/assets/images/chain.png"}
+                    alt="Chain"
+                    fit="contain"
+                    width={50}
+                    height={50}
+                  />
+                </Reveal>
+                <Reveal>
+                  <Image
+                    src={"/static/assets/images/fire.png"}
+                    alt="Fire"
+                    fit="contain"
+                    width={50}
+                    height={50}
+                  />
+                </Reveal>
               </Flex>
             </Box>
 
-            <Text
-              mt="md"
-              fz={"20px"}
-              style={{ color: "white" }}
-              w={400}
-              maw={"100%"}
-              lh={2}
-            >
-              Participate in getlinked tech Hackathon 2023 stand a chance to win
-              a Big prize
-            </Text>
+            <Reveal>
+              <Text
+                mt="md"
+                fz={"20px"}
+                style={{ color: "white" }}
+                w={400}
+                maw={"100%"}
+                lh={2}
+              >
+                Participate in getlinked tech Hackathon 2023 stand a chance to
+                win a Big prize
+              </Text>
+            </Reveal>
 
             <ReadMoreBtn />
 

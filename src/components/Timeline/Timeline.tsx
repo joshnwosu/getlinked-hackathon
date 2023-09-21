@@ -1,14 +1,16 @@
 import { Box, Container, Flex, Image, Text, Title } from "@mantine/core";
 import React from "react";
 import { timeline_data } from "./data";
+import Reveal from "../widgets/Reveal";
 
 export default function Timeline() {
   return (
     <Container size={"lg"} py={100} pos={"relative"}>
-      <Flex align="center" direction="column">
+      <Flex align="center" justify={"center"} direction="column">
         <Title order={1} style={{ color: "white" }}>
-          Timeline
+          <Reveal>Timeline</Reveal>
         </Title>
+
         <Text
           w={400}
           maw={"100%"}
@@ -17,8 +19,10 @@ export default function Timeline() {
           size="lg"
           style={{ color: "white" }}
         >
-          Here is the breakdown of the time we anticipate using for the upcoming
-          event.
+          <Reveal>
+            Here is the breakdown of the time we anticipate using for the
+            upcoming event.
+          </Reveal>
         </Text>
       </Flex>
 
@@ -80,8 +84,9 @@ export default function Timeline() {
                 {index % 2 === 0 ? (
                   <>
                     <Title ta="right" style={{ color: "#D434FE" }} order={3}>
-                      {data.title}
+                      <Reveal>{data.title}</Reveal>
                     </Title>
+
                     <Text
                       ta="right"
                       mt="md"
@@ -90,7 +95,7 @@ export default function Timeline() {
                       maw={"100%"}
                       style={{ color: "white" }}
                     >
-                      {data.content}
+                      <Reveal>{data.content}</Reveal>
                     </Text>
                   </>
                 ) : (
@@ -101,7 +106,7 @@ export default function Timeline() {
                     }}
                     order={3}
                   >
-                    {data.date}
+                    <Reveal>{data.date}</Reveal>
                   </Title>
                 )}
               </Box>
@@ -164,13 +169,14 @@ export default function Timeline() {
                     }}
                     order={3}
                   >
-                    {data.date}
+                    <Reveal>{data.date}</Reveal>
                   </Title>
                 ) : (
                   <>
                     <Title style={{ color: "#D434FE" }} order={3}>
-                      {data.title}
+                      <Reveal>{data.title} </Reveal>
                     </Title>
+
                     <Text
                       mt="md"
                       fz="md"
@@ -178,7 +184,7 @@ export default function Timeline() {
                       maw={"100%"}
                       style={{ color: "white" }}
                     >
-                      {data.content}
+                      <Reveal>{data.content}</Reveal>
                     </Text>
                   </>
                 )}
