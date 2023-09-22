@@ -16,7 +16,7 @@ import Reveal from "../widgets/Reveal";
 
 export function Welcome() {
   return (
-    <Container size={"xl"}>
+    <Container size={"lg"}>
       <Grid
         // gutter={"xl"}
         justify="space-between"
@@ -33,14 +33,14 @@ export function Welcome() {
                   pos={"relative"}
                   style={{ color: "white" }}
                 >
-                  getLinked Tech <br />
+                  getlinked Tech <br />
                   <Reveal>
                     Hackathon <span style={{ color: "#d434fe" }}>1.0</span>
                   </Reveal>
                 </Title>
               </Reveal>
 
-              <Flex style={{ position: "absolute", right: 0, bottom: 0 }}>
+              <Flex style={{ position: "absolute", right: -70, bottom: 0 }}>
                 <Reveal>
                   <Image
                     src={"/static/assets/images/chain.png"}
@@ -101,7 +101,7 @@ export function Welcome() {
             }}
             pb={"xl"}
           >
-            <Title style={{ color: "white" }}>
+            <Title order={2} style={{ color: "white" }}>
               Igniting a Revolution in HR Innovation
             </Title>
             <Image

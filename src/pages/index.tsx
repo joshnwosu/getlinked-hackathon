@@ -8,15 +8,26 @@ import Reward from "../components/Reward/Reward";
 import Partners from "../components/Partners/Partners";
 import Privacy from "../components/Privacy/Privacy";
 import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/Header/Header";
 
 export default function HomePage() {
   return (
     <>
+      <Header />
       <Welcome />
       {/* <ColorSchemeToggle /> */}
-      <Overview />
-      <FAQ />
-      <Timeline />
+      <section id="overview">
+        <Overview />
+      </section>
+
+      <section id="faqs">
+        <FAQ />
+      </section>
+
+      <section id="timeline">
+        <Timeline />
+      </section>
+
       <Reward />
       <Partners />
       <Privacy />
