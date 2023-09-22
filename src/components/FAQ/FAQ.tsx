@@ -43,6 +43,7 @@ export default function FAQ() {
               defaultValue="item-0"
               mt={50}
               // classNames={{ chevron: classes.chevron }}}
+              color="white"
             >
               {faq_data.map((data, index) => {
                 return (
@@ -61,7 +62,9 @@ export default function FAQ() {
                       </Title>
                     </Accordion.Control>
                     <Accordion.Panel>
-                      <Text fz={"md"}>{data.content}</Text>
+                      <Text fz={"md"} c={"white"}>
+                        {data.content}
+                      </Text>
                     </Accordion.Panel>
                   </Accordion.Item>
                 );

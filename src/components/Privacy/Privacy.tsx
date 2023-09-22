@@ -29,7 +29,7 @@ export default function Privacy() {
               <TextHightlight>Terms</TextHightlight>
             </Reveal>
           </Title>
-          <Text my={20} fz={"lg"} lh={2}>
+          <Text my={20} fz={"lg"} lh={2} c={"dimmed"}>
             <Reveal>Last updated on September 12, 2023</Reveal>
           </Text>
           <Text mt={20} style={{ color: "white" }} fz={"md"} lh={2}>
