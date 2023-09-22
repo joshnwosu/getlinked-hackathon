@@ -3,7 +3,7 @@ import { Container, Group, Burger, Image, Button } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import * as classes from "./Header.module.css";
 import React from "react";
-import ReadMoreBtn from "../widgets/ReadMoreBtn";
+import { Link } from "gatsby";
 
 const links = [
   { link: "#overview", label: "Overview" },
@@ -77,12 +77,13 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container size="xl" className={classes.inner}>
-        {/* <MantineLogo size={28} /> */}
-        <Image
-          src={"/static/assets/images/getlinked.png"}
-          alt="getlinked"
-          style={{ width: 150 }}
-        />
+        <Link to="/">
+          <Image
+            src={"../../../assets/images/getlinked.png"}
+            alt="getlinked"
+            style={{ width: 150 }}
+          />
+        </Link>
         <Group gap={5} visibleFrom="xs">
           {items}
 

@@ -72,7 +72,7 @@ export default function FAQ() {
         <Grid.Col span={6}>
           <Flex justify="flex-end">
             <Image
-              src={"/static/assets/images/faq.png"}
+              src={"../../../assets/images/faq.png"}
               style={{ width: "100%" }}
               alt="FAQs"
             />

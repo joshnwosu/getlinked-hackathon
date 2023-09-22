@@ -47,12 +47,14 @@ export function Footer() {
       <Container className={classes.inner} size={"lg"}>
         <div className={classes.logo}>
           {/* <MantineLogo size={30} /> */}
-          <Image
-            src={"/static/assets/images/getlinked.png"}
-            alt="getlinked"
-            style={{ width: 150 }}
-            mb={"md"}
-          />
+          <Link to="/">
+            <Image
+              src={"../../../assets/images/getlinked.png"}
+              alt="getlinked"
+              style={{ width: 150 }}
+              mb={"md"}
+            />
+          </Link>
           <Text size="md" c="white" lh={2} className={classes.description}>
             Getlinked Tech Hackathon is a technology innovation program
             established by a group of organizations with the aim of showcasing

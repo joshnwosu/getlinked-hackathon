@@ -28,7 +28,7 @@ export default function Timeline() {
 
       <Box mt={100} pos={"relative"}>
         <Image
-          src={"/static/assets/images/star_purple.png"}
+          src={"../../../assets/images/star_purple.png"}
           alt="Star"
           style={{
             width: 20,
@@ -39,7 +39,7 @@ export default function Timeline() {
           }}
         />
         <Image
-          src={"/static/assets/images/star_white.png"}
+          src={"../../../assets/images/star_white.png"}
           alt="Star"
           style={{
             width: 20,
@@ -50,7 +50,7 @@ export default function Timeline() {
           }}
         />
         <Image
-          src={"/static/assets/images/star_grey.png"}
+          src={"../../../assets/images/star_grey.png"}
           alt="Star"
           style={{
             width: 20,

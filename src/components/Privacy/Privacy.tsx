@@ -110,14 +110,14 @@ export default function Privacy() {
             style={{ position: "relative" }}
           >
             <Image
-              src={"/static/assets/images/gaurd.png"}
+              src={"../../../assets/images/gaurd.png"}
               style={{ width: "80%", position: "absolute", top: 0 }}
               alt="Gaurd"
             />
 
             <Reveal>
               <Image
-                src={"/static/assets/images/lock.png"}
+                src={"../../../assets/images/lock.png"}
                 style={{ width: "100%", marginTop: 100 }}
                 alt="Gaurd"
               />

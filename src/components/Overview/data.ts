@@ -31,7 +31,7 @@ export const key_attributes_data = [
 ];
 
 export const images = [
-  "/static/assets/images/the_big_idea.png",
-  "/static/assets/images/rules.png",
-  "/static/assets/images/key_attributes.png",
+  "../../../assets/images/the_big_idea.png",
+  "../../../assets/images/rules.png",
+  "../../../assets/images/key_attributes.png",
 ];

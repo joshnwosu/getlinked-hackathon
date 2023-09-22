@@ -9,7 +9,7 @@ export default function Reward() {
         <Grid.Col span={6}>
           <Flex justify="flex-start">
             <Image
-              src={"/static/assets/images/trophy.png"}
+              src={"../../../assets/images/trophy.png"}
               style={{ width: "100%" }}
               alt="Trophy"
             />
@@ -26,7 +26,7 @@ export default function Reward() {
               participants.
             </Text>
             <Image
-              src={"/static/assets/images/rewards.png"}
+              src={"../../../assets/images/rewards.png"}
               style={{ width: "100%" }}
               alt="Trophy"
               mt={100}

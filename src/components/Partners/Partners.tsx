@@ -24,7 +24,7 @@ export default function Partners() {
       </Flex>
 
       <Image
-        src={"/static/assets/images/partner_and_sponsors.png"}
+        src={"../../../assets/images/partner_and_sponsors.png"}
         style={{ width: "100%" }}
         alt="Trophy"
         mt={100}
