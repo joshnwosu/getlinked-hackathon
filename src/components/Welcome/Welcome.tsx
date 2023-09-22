@@ -43,7 +43,7 @@ export function Welcome() {
               <Flex style={{ position: "absolute", right: -70, bottom: 0 }}>
                 <Reveal>
                   <Image
-                    src={"/static/assets/images/chain.png"}
+                    src={"../../../assets/images/chain.png"}
                     alt="Chain"
                     fit="contain"
                     width={50}
@@ -52,7 +52,7 @@ export function Welcome() {
                 </Reveal>
                 <Reveal>
                   <Image
-                    src={"/static/assets/images/fire.png"}
+                    src={"../../../assets/images/fire.png"}
                     alt="Fire"
                     fit="contain"
                     width={50}
@@ -119,13 +119,13 @@ export function Welcome() {
             }}
           >
             <Image
-              src={"/static/assets/images/man.png"}
+              src={"../../../assets/images/man.png"}
               alt="Man wearing wearing smart glasses"
               width={"125%"}
               height={"120%"}
             />
             <Image
-              src={"/static/assets/images/globe.png"}
+              src={"../../../assets/images/globe.png"}
               alt="Globe"
               width={"100%"}
               height={"100%"}
