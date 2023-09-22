@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Container, Group, Burger, Image } from "@mantine/core";
+import { Container, Group, Burger, Image, Button } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import * as classes from "./Header.module.css";
 import React from "react";
+import ReadMoreBtn from "../widgets/ReadMoreBtn";
 
 const links = [
   { link: "#overview", label: "Overview" },
@@ -13,7 +14,6 @@ const links = [
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
 
   const [activeSection, setActiveSection] = useState("");
 
@@ -54,7 +54,7 @@ export function Header() {
       const yOffset = -70; // Adjust the offset if needed
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+      window.scrollTo({ top: y + 100, behavior: "smooth" });
     }
   };
 
@@ -85,6 +85,17 @@ export function Header() {
         />
         <Group gap={5} visibleFrom="xs">
           {items}
+
+          <Button
+            size="md"
+            fz={"md"}
+            variant="gradient"
+            px={50}
+            gradient={{ from: "#F534BF", to: "#903AFF", deg: 90 }}
+            ml={"xl"}
+          >
+            Register
+          </Button>
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />

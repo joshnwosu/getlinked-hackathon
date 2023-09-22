@@ -11,7 +11,7 @@
 }
 
 .inner {
-  height: rem(56px);
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,8 @@
   }
 
   [data-mantine-color-scheme] &[data-active] {
-    background-color: var(--mantine-color-blue-filled);
-    color: var(--mantine-color-white);
+    /* background-color: var(--mantine-color-blue-filled); */
+    /* color: var(--mantine-color-white); */
+    color: #d434fe;
   }
 }

@@ -105,7 +105,7 @@ export function Welcome() {
               Igniting a Revolution in HR Innovation
             </Title>
             <Image
-              src={"/static/assets/images/line.png"}
+              src={"../../../assets/images/line.png"}
               alt="Line"
               fit="contain"
               style={{ width: 200 }}

@@ -14,7 +14,9 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <Welcome />
+      <section id="welcome">
+        <Welcome />
+      </section>
       {/* <ColorSchemeToggle /> */}
       <section id="overview">
         <Overview />
@@ -28,7 +30,9 @@ export default function HomePage() {
         <Timeline />
       </section>
 
-      <Reward />
+      <section id="reward">
+        <Reward />
+      </section>
       <Partners />
       <Privacy />
       <Footer />
