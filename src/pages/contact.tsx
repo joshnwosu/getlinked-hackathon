@@ -117,21 +117,37 @@ export default function contact() {
                   {...form.getInputProps("first_name")}
                   size="md"
                   w={"100%"}
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
                 <TextInput
                   placeholder="Email"
                   {...form.getInputProps("email")}
                   size="md"
                   w={"100%"}
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
                 <Textarea
                   placeholder="Message"
                   {...form.getInputProps("message")}
                   size="md"
                   w={"100%"}
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
 
                 <Button
+                  type="submit"
                   size="lg"
                   fz={"sm"}
                   variant="gradient"

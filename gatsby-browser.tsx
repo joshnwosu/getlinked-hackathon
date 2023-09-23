@@ -8,7 +8,7 @@ import Footer from "./src/components/Footer/Footer";
 
 export const wrapPageElement = ({ element }) => {
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} defaultColorScheme="dark">
       <Header />
       {element}
       <Footer />

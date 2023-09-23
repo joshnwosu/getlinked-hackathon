@@ -70,12 +70,23 @@ export default function Register() {
                   placeholder="Enter the name of your group"
                   {...form.getInputProps("team_name")}
                   size="md"
+                  variant="default"
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
                 <TextInput
                   label="Phone"
                   placeholder="Enter your phone number"
                   {...form.getInputProps("phone")}
                   size="md"
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
 
                 <TextInput
@@ -83,6 +94,11 @@ export default function Register() {
                   placeholder="Enter your email address"
                   {...form.getInputProps("email")}
                   size="md"
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
 
                 <TextInput
@@ -90,6 +106,11 @@ export default function Register() {
                   placeholder="What is your group project topic"
                   {...form.getInputProps("email")}
                   size="md"
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
                 />
 
                 <Button
