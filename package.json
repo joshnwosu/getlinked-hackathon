@@ -18,6 +18,7 @@
     "@mantine/core": "7.0.0",
     "@mantine/form": "^7.0.0",
     "@mantine/hooks": "7.0.0",
+    "axios": "^1.5.0",
     "framer-motion": "^10.16.4",
     "gatsby": "^5.10.0",
     "gatsby-plugin-nprogress": "^5.12.0",
