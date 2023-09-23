@@ -2465,6 +2465,11 @@ accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
+accessible-nprogress@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/accessible-nprogress/-/accessible-nprogress-2.1.2.tgz#8e65ebf4936db1752638e1cd2e8730f9bef311e9"
+  integrity sha512-reIwMbbt+ZGOmQLWPXGcPf5X1F4fzsZAekY9alCxpekxizRhQMAd/QInaA8k7WtwTcGMzD9hnYswGLcaJDRY/A==
+
 acorn-import-assertions@^1.7.6:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/acorn-import-assertions/-/acorn-import-assertions-1.9.0.tgz#507276249d684797c84e0734ef84860334cfb1ac"
@@ -5104,6 +5109,14 @@ gatsby-parcel-config@1.10.0:
     "@parcel/runtime-js" "2.8.3"
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
+
+gatsby-plugin-nprogress@^5.12.0:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-5.12.0.tgz#f57b14d791a26d6538ee586418f50adaff41cfd3"
+  integrity sha512-QLZGo4LKWM7i3dbiXi3Et4syLe3/XEqmyU0Q8k8Vpt2M7bzpiBLeQsCGehyTtuwvZfzZUd32OdifEnDZw88kkg==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    accessible-nprogress "^2.1.2"
 
 gatsby-plugin-page-creator@^5.10.0:
   version "5.10.0"

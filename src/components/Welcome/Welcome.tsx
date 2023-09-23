@@ -16,7 +16,29 @@ import Reveal from "../widgets/Reveal";
 
 export function Welcome() {
   return (
-    <Container size={"lg"}>
+    <Container size={"lg"} pt={100} pos={"relative"}>
+      <Flex
+        justify={"flex-end"}
+        align={"flex-end"}
+        direction={"column"}
+        style={{
+          width: "100%",
+          position: "absolute",
+        }}
+        pb={"xl"}
+      >
+        <Title order={3} style={{ color: "white" }}>
+          <Reveal>Igniting a Revolution in HR Innovation</Reveal>
+        </Title>
+        <Reveal>
+          <Image
+            src={"../../../assets/images/line.png"}
+            alt="Line"
+            fit="contain"
+            style={{ width: 150 }}
+          />
+        </Reveal>
+      </Flex>
       <Grid
         // gutter={"xl"}
         justify="space-between"
@@ -92,25 +114,6 @@ export function Welcome() {
           </Box>
         </Grid.Col>
         <Grid.Col span={7}>
-          <Flex
-            justify={"flex-end"}
-            align={"flex-end"}
-            direction={"column"}
-            style={{
-              width: "100%",
-            }}
-            pb={"xl"}
-          >
-            <Title order={2} style={{ color: "white" }}>
-              Igniting a Revolution in HR Innovation
-            </Title>
-            <Image
-              src={"../../../assets/images/line.png"}
-              alt="Line"
-              fit="contain"
-              style={{ width: 200 }}
-            />
-          </Flex>
           <Box
             style={{
               display: "flex",
@@ -121,8 +124,8 @@ export function Welcome() {
             <Image
               src={"../../../assets/images/man.png"}
               alt="Man wearing wearing smart glasses"
-              width={"125%"}
-              height={"120%"}
+              width={"100%"}
+              height={"100%"}
             />
             <Image
               src={"../../../assets/images/globe.png"}

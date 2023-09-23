@@ -1,35 +1,112 @@
-import { Space, Title } from "@mantine/core";
-import { Link } from "gatsby";
+import {
+  ActionIcon,
+  Box,
+  Button,
+  Container,
+  Flex,
+  Grid,
+  Group,
+  Image,
+  Text,
+  TextInput,
+  Textarea,
+  Title,
+  rem,
+} from "@mantine/core";
 import React from "react";
-import Reveal from "../components/widgets/Reveal";
+import TextHightlight from "../components/widgets/TextHightlight";
+import {
+  TbBrandTwitter,
+  TbBrandInstagram,
+  TbBrandFacebook,
+  TbBrandLinkedin,
+} from "react-icons/tb";
+import { useForm } from "@mantine/form";
+import * as classes from "../styles/register.module.css";
 
 export default function Register() {
+  const form = useForm({
+    initialValues: {
+      first_name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  const handleSubmit = (data: any) => {
+    console.log({ data });
+  };
   return (
-    <>
-      <div>
-        <div>
-          <Reveal>
-            <Title order={1}>Register Page</Title>
-          </Reveal>
-          <Reveal>
-            <Link to="/">Home</Link>
-          </Reveal>
-        </div>
+    <Container size={"lg"} py={100}>
+      <Grid align="center" grow>
+        <Grid.Col span={5}>
+          <Flex justify="flex-start">
+            <Image
+              src={"../../assets/images/register.png"}
+              style={{ width: "100%" }}
+              alt="The Big Idea"
+              className={classes.image}
+            />
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={7}>
+          <Box className={classes.box}>
+            <Title order={3} lh={1.5}>
+              <TextHightlight>Register</TextHightlight>
+            </Title>
 
-        <Space h={700} />
+            <Text c={"white"} my={"md"}>
+              Be part of this movement............
+            </Text>
 
-        <Reveal>
-          <Title order={1}>Content 1</Title>
-        </Reveal>
+            <Title order={3} lh={1.5} c={"white"} fw={"600"}>
+              CREATE YOUR ACCOUNT
+            </Title>
 
-        <Space h={700} />
+            <form onSubmit={form.onSubmit((data) => handleSubmit(data))}>
+              <Flex gap={"lg"} mt={"xl"} direction={"column"}>
+                <TextInput
+                  label="Team's Name"
+                  placeholder="Enter the name of your group"
+                  {...form.getInputProps("team_name")}
+                  size="md"
+                />
+                <TextInput
+                  label="Phone"
+                  placeholder="Enter your phone number"
+                  {...form.getInputProps("phone")}
+                  size="md"
+                />
 
-        <Reveal>
-          <Title order={1}>Content 2</Title>
-        </Reveal>
+                <TextInput
+                  label="Email"
+                  placeholder="Enter your email address"
+                  {...form.getInputProps("email")}
+                  size="md"
+                />
 
-        <Space h={700} />
-      </div>
-    </>
+                <TextInput
+                  label="Project Topic"
+                  placeholder="What is your group project topic"
+                  {...form.getInputProps("email")}
+                  size="md"
+                />
+
+                <Button
+                  size="lg"
+                  fz={"sm"}
+                  variant="gradient"
+                  px={50}
+                  fullWidth
+                  gradient={{ from: "#F534BF", to: "#903AFF", deg: 90 }}
+                >
+                  Register Now
+                </Button>
+              </Flex>
+            </form>
+          </Box>
+        </Grid.Col>
+      </Grid>
+    </Container>
   );
 }

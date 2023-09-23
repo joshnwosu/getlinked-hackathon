@@ -12,7 +12,7 @@ const links = [
   //   { link: "/contact", label: "Contact" },
 ];
 
-export function Header() {
+export default function Header() {
   const [opened, { toggle }] = useDisclosure(false);
 
   const [activeSection, setActiveSection] = useState("");
@@ -59,9 +59,9 @@ export function Header() {
   };
 
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
-      href={link.link}
+      to={link.link}
       className={classes.link}
       data-active={`#${activeSection}` === link.link || undefined}
       onClick={(event) => {
@@ -71,7 +71,7 @@ export function Header() {
       }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (
@@ -84,8 +84,11 @@ export function Header() {
             style={{ width: 150 }}
           />
         </Link>
-        <Group gap={5} visibleFrom="xs">
+        <Group gap={5} visibleFrom="md">
           {items}
+          <Link to={"/contact"} className={classes.link}>
+            Contact
+          </Link>
 
           <Button
             size="md"
@@ -94,12 +97,14 @@ export function Header() {
             px={50}
             gradient={{ from: "#F534BF", to: "#903AFF", deg: 90 }}
             ml={"xl"}
+            component={Link}
+            to="/register"
           >
             Register
           </Button>
         </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
       </Container>
     </header>
   );

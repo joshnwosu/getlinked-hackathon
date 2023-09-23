@@ -2,6 +2,6 @@
 
 body {
   background-color: #150e28 !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   scroll-behavior: smooth;
 }

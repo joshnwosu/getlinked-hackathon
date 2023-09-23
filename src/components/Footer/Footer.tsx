@@ -20,7 +20,7 @@ import React from "react";
 import { link_data } from "./data";
 import { Link } from "gatsby";
 
-export function Footer() {
+export default function Footer() {
   const groups = link_data.map((group) => {
     const links = group.links.map((link, index) => (
       <Text

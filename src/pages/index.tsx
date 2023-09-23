@@ -7,13 +7,10 @@ import FAQ from "../components/FAQ/FAQ";
 import Reward from "../components/Reward/Reward";
 import Partners from "../components/Partners/Partners";
 import Privacy from "../components/Privacy/Privacy";
-import { Footer } from "../components/Footer/Footer";
-import { Header } from "../components/Header/Header";
 
 export default function HomePage() {
   return (
     <>
-      <Header />
       <section id="welcome">
         <Welcome />
       </section>
@@ -35,7 +32,6 @@ export default function HomePage() {
       </section>
       <Partners />
       <Privacy />
-      <Footer />
     </>
   );
 }

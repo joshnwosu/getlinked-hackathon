@@ -5,7 +5,18 @@ const config: GatsbyConfig = {
     title: `GetLinked Hackathon`,
   },
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-postcss"],
+  plugins: [
+    "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+  ],
 };
 
 export default config;

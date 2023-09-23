@@ -1,0 +1,16 @@
+.image {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.box {
+  background-color: #1b142d;
+  border-radius: 10;
+  width: 100%;
+  min-height: 200;
+  padding: 60px;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}

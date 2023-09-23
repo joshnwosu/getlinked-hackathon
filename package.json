@@ -20,6 +20,7 @@
     "@mantine/hooks": "7.0.0",
     "framer-motion": "^10.16.4",
     "gatsby": "^5.10.0",
+    "gatsby-plugin-nprogress": "^5.12.0",
     "gatsby-plugin-postcss": "^6.10.0",
     "postcss": "^8.4.23",
     "react": "^18.2.0",
