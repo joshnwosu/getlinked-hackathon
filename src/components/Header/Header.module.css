@@ -28,6 +28,7 @@
   font-weight: 500;
 
   @mixin hover {
+    background-color: none;
     color: #d434fe;
   }
 
