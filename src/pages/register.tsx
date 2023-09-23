@@ -1,12 +1,15 @@
 import {
   ActionIcon,
+  Anchor,
   Box,
   Button,
+  Checkbox,
   Container,
   Flex,
   Grid,
   Group,
   Image,
+  Select,
   Text,
   TextInput,
   Textarea,
@@ -112,6 +115,38 @@ export default function Register() {
                     },
                   }}
                 />
+
+                <Select
+                  label="Category"
+                  placeholder="Select your category"
+                  data={["Front-end", "Back-end", "Ui/Ux"]}
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
+                />
+
+                <Select
+                  label="Group size"
+                  placeholder="Select"
+                  data={["1 - 10", "10 - 20", "20 - 100", "others"]}
+                  styles={{
+                    input: {
+                      backgroundColor: "rgba(0,0,0,0.2)",
+                    },
+                  }}
+                />
+
+                <Group justify="space-between" mt="lg">
+                  <Anchor component="button" size="sm" c={"pink"} fs={"italic"}>
+                    Please review your registration details before submitting
+                  </Anchor>
+                  <Checkbox
+                    label="I agreed with the event terms and conditions and privacy
+                    policy"
+                  />
+                </Group>
 
                 <Button
                   size="lg"
