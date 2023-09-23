@@ -94,7 +94,7 @@ export function Welcome() {
                 lh={2}
               >
                 Participate in getlinked tech Hackathon 2023 stand a chance to
-                win a Big prize
+                win a Big prize.
               </Text>
             </Reveal>
 
